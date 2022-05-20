@@ -1,0 +1,52 @@
+@keyframes blinking {
+    0% {
+        border-color: rgba(0, 71, 171, 0);
+    }
+    50% {
+        border-color: rgba(0, 71, 171, 0.5);
+    }
+    100% {
+        border-color: rgba(0, 71, 171, 1);
+    }
+}
+
+header {
+    padding: 20px 0;
+}
+
+header::before {
+    content: '';
+    display: block;
+    height: 15px;
+    width: 15px;
+    background-color: yellow;
+    border-radius: 100%;
+}
+
+header h1 {
+    display: inline;
+    border: 3px solid #6495ED;
+    padding: 1px 2px;
+    border-bottom-color: green;
+}
+
+header h2 {
+    border-right: 3px solid red;
+    animation: blinking 0.5s infinite;
+    display: inline;
+    padding-right: 2px;
+}
+
+.summary a {
+    background-color: #6495ED;
+    color: white;
+    padding: 2px;
+    transition: background-color 1s ease;
+    transition: color 1s ease;
+}
+
+.summary a:hover {
+    color: #0047AB;
+    text-decoration-color: #0047AB;
+    background-color: #00FFFF;
+}

@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&family=Inconsolata:wght@400;500&family=Roboto+Mono&display=swap');
+
+html {
+  --color-1: #ffc759;
+  --color-2: #ff7b9c;
+  --color-3: #607196;
+  --color-4: #babfd1;
+  --color-5: #e8e9ed;
+  font-family: 'Inconsolata', monospace;
+}
+
+body {
+  --avatar-size: 10rem;
+  display: grid;
+  grid-template:
+    'extra1 extra2 extra3' auto
+    'page page page' auto / 1fr 1fr 1fr;
+}
+
+.page-wrapper {
+  grid-area: page;
+}
+
+.extra1,
+.extra2,
+.extra3 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.extra1 {
+  grid-area: extra1;
+}
+
+.extra2 {
+  grid-area: extra2;
+}
+
+.extra3 {
+  grid-area: extra3;
+}
+
+.extra1::before,
+.extra1::after,
+.extra2::before,
+.extra2::after,
+.extra3::before,
+.extra3::after {
+  background-size: contain;
+  content: '';
+  display: block;
+  height: var(--avatar-size);
+  width: var(--avatar-size);
+}
+
+.extra1::before {
+  background-image: url(images/adhiv.png);
+}
+
+.extra1::after {
+  background-image: url(images/alex.jpeg);
+}
+
+.extra2::before {
+  background-image: url(images/emma.jpeg);
+}
+
+.extra2::after {
+  background-image: url(images/pranay.jpeg);
+}
+
+.extra3::before {
+  background-image: url(images/vince.jpeg);
+}
+
+.extra3::after {
+  background-image: url(images/zack.png);
+}
+
+/* ------------- */
+
+.main {
+  display: grid;
+  gap: 1rem;
+  grid-template:
+    'explanation explanation .' auto
+    '. participation participation' auto
+    'benefits benefits .' auto
+    '. requirements requirements' auto
+    'footer footer footer' auto / 1fr 1fr 1fr;
+}
+
+.explanation {
+  grid-area: explanation;
+}
+
+.participation {
+  grid-area: participation;
+}
+
+.benefits {
+  grid-area: benefits;
+}
+
+.requirements {
+  grid-area: requirements;
+}
+
+.main > footer {
+  grid-area: footer;
+}
+
+.explanation {
+  background-color: var(--color-5);
+  padding: 4rem;
+}
+
+.explanation > h3 {
+  border-bottom: 10px solid var(--color-3);
+  color: var(--color-2);
+  font-size: 4rem;
+  margin-block-start: 0;
+  margin-block-end: 0.6em;
+  padding-block-end: 0.3em;
+}
+
+.explanation p {
+  line-height: 1.5;
+}
+
+.explanation p abbr {
+  text-decoration-color: var(--color-1);
+  text-decoration-style: dotted;
+  text-decoration-thickness: 4px;
+}
+
+.participation {
+  background-color: var(--color-1);
+}
+
+.benefits {
+  background-color: var(--color-1);
+}
+
+.requirements {
+  background-color: var(--color-1);
+}
